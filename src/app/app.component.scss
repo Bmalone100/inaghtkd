@@ -1,0 +1,17 @@
+nav {
+    background-color: #007bff; // Bootstrap primary color
+    padding: 1rem;
+  
+    a {
+      color: white; // Text color for links
+      text-decoration: none; // Remove underline
+      margin-right: 15px; // Space between links
+      border-radius: 4px; // Rounded corners
+      padding: 0.5rem 1rem; // Padding for links
+  
+      &:hover {
+        background-color: #0056b3; // Darker shade on hover
+      }
+    }
+  }
+  
