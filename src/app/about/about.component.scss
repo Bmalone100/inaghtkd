@@ -1,10 +1,66 @@
-h1 {
-    color: #28a745; // Success color for the heading
-    font-size: 2.5rem;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-  
+.about-page {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.banner-left, .banner-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px; /* Adjust width as needed */
+}
+
+.banner-left {
+  left: 0;
+  background-color: #f4f4f4; /* Optional background color */
+}
+
+.banner-right {
+  right: 0;
+  background-color: #f4f4f4; /* Optional background color */
+}
+
+.banner-left img, .banner-right img {
+  width: 100%;
+  height: auto;
+}
+
+.about-container {
+  margin: 0 150px; /* Match the width of the banners */
+  padding: 20px;
+  max-width: calc(100% - 300px); /* Adjust based on total banner width */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.head-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+}
+
+.content-section {
+  margin-bottom: 20px;
+}
+
+.content-section h2 {
+  color: #333;
+}
+
+.contact-section {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-section a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
