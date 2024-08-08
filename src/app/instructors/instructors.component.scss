@@ -1,0 +1,60 @@
+/* Ensure full height of viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Main Content Styles */
+  main {
+    margin-top: 60px; /* Adjust based on the height of the fixed header or top ribbon */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Optional: background color for the main content */
+  }
+  
+  /* Instructors Page Styles */
+  .instructors-page {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Instructor Section Styles */
+  .instructor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .instructor-image {
+    flex: 1;
+    margin-right: 20px;
+    min-width: 150px; /* Minimum width for the image container */
+  }
+  
+  .instructor-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .instructor-info {
+    flex: 2;
+  }
+  
+  .instructor-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .instructor-info p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
