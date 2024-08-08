@@ -1,0 +1,38 @@
+.contact-page {
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100vh - 4rem); /* Adjust for the height of the top ribbon */
+    margin-top: 4rem; /* Space for fixed navigation */
+  }
+  
+  .contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+    margin-bottom: 40px;
+  }
+  
+  .social-icon img {
+    width: 40px; /* Adjust size of icons */
+    height: auto;
+  }
+  
+  .google-form {
+    display: flex;
+    justify-content: center; /* Center the form */
+  }
+  
+  iframe {
+    border: none;
+  }
+  
