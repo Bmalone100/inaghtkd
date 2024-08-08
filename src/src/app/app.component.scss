@@ -1,0 +1,30 @@
+/* Navigation bar styles */
+nav {
+  background-color: #007bff; // Bootstrap primary color
+  padding: 1rem;
+  position: fixed; // Keep nav fixed at the top
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; // Ensure it is above other content
+  box-sizing: border-box;
+  height: 4rem; // Define a fixed height
+  display: flex;
+  align-items: center; // Center vertically
+  justify-content: center; // Center horizontally
+}
+
+nav a {
+  color: white; // Text color for links
+  text-decoration: none; // Remove underline
+  margin: 0 15px; // Space between links
+  border-radius: 4px; // Rounded corners
+  padding: 0.5rem 1rem; // Padding for links
+  font-size: 1.2rem; // Increase font size
+  line-height: 1.5; // Improve line spacing
+}
+
+nav a:hover {
+  background-color: #0056b3; // Darker shade on hover
+}
+

@@ -1,0 +1,158 @@
+/* Ensure full height of viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* About page styling */
+.about-page {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Intro Section Styles */
+.intro-section {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.intro-section .banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.intro-section .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-section .intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: darken background for text readability */
+}
+
+.intro-section .intro-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.intro-section .intro-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Team Section Styles */
+.team-section {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 20px;
+}
+
+.team-section .banner-left {
+  flex: 1;
+  background-color: #f4f4f4;
+}
+
+.team-section .banner-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.team-section .text-content {
+  flex: 2;
+  padding: 20px;
+  background-color: #eaeaea;
+  box-sizing: border-box;
+}
+
+.team-section .text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.team-section .text-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.team-section .text-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.team-section .text-content li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Class Information Section Styles */
+.class-info-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+}
+
+.class-info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.class-info-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.class-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.class-item {
+  background-color: #eaeaea;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.class-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.class-item p {
+  font-size: 1rem;
+}
+
+
+/* Additional Info Section Styles */
+.additional-info {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.additional-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.additional-info p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
