@@ -1,30 +1,77 @@
-/* Navigation bar styles */
+/* Base Navbar Styles */
 nav {
-  background-color: #007bff; // Bootstrap primary color
-  padding: 1rem;
-  position: fixed; // Keep nav fixed at the top
+  background-color: steelblue; /* Background color for the navbar */
+  padding: 15px 30px; /* Increased padding for a larger navbar */
+  box-sizing: border-box;
+  position: fixed; /* Fix the navbar at the top */
+  width: 100%; /* Full width of the viewport */
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 1000; // Ensure it is above other content
-  box-sizing: border-box;
-  height: 4rem; // Define a fixed height
-  display: flex;
-  align-items: center; // Center vertically
-  justify-content: center; // Center horizontally
+  z-index: 1000; /* Ensure it stays above other content */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between nav links and logos */
+  align-items: center; /* Center items vertically */
 }
 
+/* Navbar Links */
 nav a {
-  color: white; // Text color for links
-  text-decoration: none; // Remove underline
-  margin: 0 15px; // Space between links
-  border-radius: 4px; // Rounded corners
-  padding: 0.5rem 1rem; // Padding for links
-  font-size: 1.2rem; // Increase font size
-  line-height: 1.5; // Improve line spacing
+  text-decoration: none;
+  color: white; /* Text color */
+  font-size: 1.4rem; /* Increased font size for better visibility */
+  margin-right: 25px; /* Space between items */
+  display: inline-block; /* Ensure items are displayed inline */
+}
+
+/* Remove margin from the last item to avoid extra space */
+nav a:last-child {
+  margin-right: 0;
 }
 
 nav a:hover {
-  background-color: #0056b3; // Darker shade on hover
+  text-decoration: underline; /* Underline on hover for better UX */
 }
 
+/* Logo Container */
+nav .nav-logos {
+  display: flex; /* Align logos horizontally */
+  align-items: center; /* Center-align logos vertically */
+}
+
+nav .nav-logos img {
+  height: 40px; /* Adjust size of logos */
+  margin-left: 10px; /* Space between logos */
+}
+
+/* Remove margin from the first logo */
+nav .nav-logos img:first-child {
+  margin-left: 0;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    padding: 15px 10px; /* Adjust padding for smaller screens */
+  }
+
+  nav a {
+    display: block; /* Stack links vertically */
+    margin: 10px 0; /* Vertical margin for stacked links */
+    font-size: 1rem; /* Slightly smaller font size on mobile */
+  }
+
+  nav .nav-logos {
+    margin-top: 10px; /* Space above logos on mobile */
+  }
+
+  nav .nav-logos img {
+    height: 25px; /* Smaller size for logos on mobile */
+    margin-left: 5px; /* Adjust spacing for smaller screens */
+  }
+}
+
+/* Ensure Navbar Does Not Overlap Content */
+body {
+  padding-top: 6rem; /* Adjust padding-top to match the increased navbar height */
+}
