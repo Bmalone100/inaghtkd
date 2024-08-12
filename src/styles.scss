@@ -1,12 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Angular Material core styles first */
+@use '@angular/material' as mat;
+@include mat.core();
+
+/* Global styles */
 body {
-    font-family: Arial, sans-serif; // Global font
-    background-color: #f8f9fa; // Light background
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    margin-top: 0; // Remove default margin from h1 elements
-  }
-  
+  font-family: Arial, sans-serif; // Global font
+  background-color: #f8f9fa; // Light background
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure html and body take up full height */
+html, body {
+  height: 100%;
+  margin: 0; // Remove default margin from body
+  font-family: Roboto, "Helvetica Neue", sans-serif; // Font for body
+}
+
+/* Remove default margin from h1 elements */
+h1 {
+  margin-top: 0;
+}
