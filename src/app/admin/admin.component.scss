@@ -1,0 +1,131 @@
+/* Global styles for admin component */
+.admin-container {
+  margin-top: 4rem; /* Space for navigation bar */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-container {
+  position: absolute;
+  top: 10rem; /* Or a value higher than the height of the nav bar */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  color: red;
+}
+
+.admin-content {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the navigation menu container */
+.navigation-menu {
+  margin-top: 1rem; /* Space above the menu */
+  padding: 1rem; /* Padding inside the menu */
+  background-color: #f9f9f9; /* Light background color for the menu */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 1rem; /* Space between items */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Style for the MatFormField */
+.mat-form-field {
+  width: 100%; /* Full width */
+  margin-bottom: 1rem; /* Space below the form field */
+}
+
+/* Style for the MatSelect */
+.mat-select {
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Style for the MatOption */
+.mat-option {
+  font-size: 1rem; /* Font size for options */
+}
+
+/* Style for the Go Button */
+button.mat-raised-button {
+  width: 150px; /* Fixed width to make it more square-like */
+  height: 50px; /* Fixed height */
+  font-size: 1.125rem; /* Bigger font size */
+  padding: 0; /* Remove default padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  background-color: #007bff; /* Primary blue color */
+  color: #ffffff; /* White text */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center text horizontally and vertically */
+}
+
+button.mat-raised-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Style for the image table */
+.image-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.image-table th, .image-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.image-table th {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.image-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.image-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Style for the edit section */
+.edit-section {
+  margin-top: 20px;
+}
+
+.edit-section input[type="file"] {
+  display: none; /* Hide file input */
+}
+
+.edit-section button {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-section button:hover {
+  background-color: #0056b3;
+}
