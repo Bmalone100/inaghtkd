@@ -1,21 +1,69 @@
-<nav>
-  <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/instructors">Instructors</a>
-    <a href="/classes">Class Info</a>
-    <a href="/contact">Contact</a>
-  </div>
-  <div class="nav-logos">
-    <a href="https://www.facebook.com/inaghtkd/" target="_blank" class="social-icon">
-      <img src="assets/icons/facebook.png" alt="Facebook">
-    </a>
-    <a href="https://www.instagram.com/inaghtkd/" target="_blank" class="social-icon">
-      <img src="assets/icons/insta.png" alt="Instagram">
-    </a>
-    <img src="assets/icons/ita_logo1.png" alt="Logo 1">
-    <img src="assets/icons/ita_logo2.png" alt="Logo 2">
-    <img src="assets/icons/itf.png" alt="Logo 3">
-  </div>  
-</nav>
-<router-outlet></router-outlet>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over" [(opened)]="isSidenavOpen">
+    <mat-nav-list>
+      <a mat-list-item href="/" (click)="sidenav.close()">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+      <a mat-list-item href="/about" (click)="sidenav.close()">
+        <mat-icon>info</mat-icon>
+        About
+      </a>
+      <a mat-list-item href="/instructors" (click)="sidenav.close()">
+        <mat-icon>people</mat-icon>
+        Instructors
+      </a>
+      <a mat-list-item href="/classes" (click)="sidenav.close()">
+        <mat-icon>school</mat-icon>
+        Class Info
+      </a>
+      <a mat-list-item href="/contact" (click)="sidenav.close()">
+        <mat-icon>contact_mail</mat-icon>
+        Contact
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span class="app-title">Inagh Taekwon-Do</span>
+
+      <span class="spacer"></span>
+
+      <div class="nav-links" fxHide fxShow.gt-sm>
+        <a mat-button href="/">
+          <mat-icon>home</mat-icon>
+          Home
+        </a>
+        <a mat-button href="/about">
+          <mat-icon>info</mat-icon>
+          About
+        </a>
+        <a mat-button href="/instructors">
+          <mat-icon>people</mat-icon>
+          Instructors
+        </a>
+        <a mat-button href="/classes">
+          <mat-icon>school</mat-icon>
+          Class Info
+        </a>
+        <a mat-button href="/contact">
+          <mat-icon>contact_mail</mat-icon>
+          Contact
+        </a>
+      </div>
+
+      <div class="nav-logos">
+        <img src="assets/icons/ita_logo1.png" alt="Logo 1" class="logo">
+        <img src="assets/icons/ita_logo2.png" alt="Logo 2" class="logo">
+        <img src="assets/icons/itf.png" alt="Logo 3" class="logo">
+      </div>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

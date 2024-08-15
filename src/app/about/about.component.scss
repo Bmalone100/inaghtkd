@@ -1,186 +1,269 @@
-/* Ensure full height of viewport */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-}
-
-/* About page styling */
 .about-page {
-  box-sizing: border-box;
-  padding: 20px;
-  height: calc(100vh - 4rem); /* Adjust for the height of the top ribbon */
-  margin-top: 4rem; /* Space for fixed navigation */
-}
-
-/* Team Section Styles */
-.team-section {
-  display: flex;
-  align-items: stretch;
-  margin-bottom: 20px;
-}
-
-.team-section .banner-left {
-  flex: 1;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally (if needed) */
-  overflow: hidden; /* Ensure no overflow if image is larger */
-  border-radius: 8px;
-}
-
-.team-section .banner-left img {
-  max-width: 100%; /* Ensures the image doesn't overflow */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.team-section .text-content {
-  flex: 2;
-  padding: 20px;
-  background-color: #ffffff;
-  box-sizing: border-box;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: box-shadow 0.3s ease;
-}
-
-.team-section .text-content:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-.team-section .text-content .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #0056b3;
-  font-weight: 700;
-}
-
-.team-section .text-content .club-name {
-  font-size: 2rem;
-  color: #0056b3;
-  margin-bottom: 20px;
-}
-
-.team-section .text-content .intro-text {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.team-section .text-content .mission-statement {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.team-section .text-content .team-heading {
-  font-size: 1.8rem;
-  color: #0056b3;
-  margin-bottom: 15px;
-}
-
-.team-section .text-content .team-intro {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 25px;
-}
-
-.team-section .text-content .team-list {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 20px;
-}
-
-.team-section .text-content .team-list li {
-  font-size: 1rem;
-  color: #333;
-}
-
-.team-section .text-content .qualifications-heading {
-  font-size: 1.8rem;
-  color: #0056b3;
-  margin-bottom: 15px;
-}
-
-.team-section .text-content .qualifications-list {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.team-section .text-content .qualifications-list li {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Class Information Section Styles */
-.class-info-section {
-  padding: 20px;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.class-info-section h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #0056b3;
-}
-
-.class-info-section p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.class-info {
   display: flex;
   flex-direction: column;
-}
-
-.class-item {
-  background-color: #ffffff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.class-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #0056b3;
-}
-
-.class-item p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Additional Info Section Styles */
-.additional-info {
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  gap: 20px;
 
-.additional-info h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #0056b3;
-}
+  .banner-background {
+    position: relative;
+    height: 300px;
+    background: url('/assets/webImages/leftbanner.jpg') no-repeat top center;
+    background-size: cover;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.additional-info p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #555;
+    .banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      text-align: center;
+      z-index: 1;
+      padding: 20px;
+      border-radius: 8px;
+
+      mat-card {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+      }
+      h1, h2, h3, p {
+        color: white; /* White text color for contrast */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds a shadow to make text pop */
+        font-weight: bold; /* Make text bold */
+      }
+    }
+  }
+
+  mat-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  mat-icon {
+    vertical-align: middle;
+    margin-right: 8px;
+    font-size: 1.2rem;
+    color: royalblue;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    
+  }
+
+  .club-name {
+    font-size: 1.8rem;
+    
+    margin-bottom: 10px;
+  }
+
+  .intro-text,
+  .mission-statement,
+  .team-intro {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .team-heading,
+  .qualifications-heading {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+  }
+
+  .team-list,
+  .qualifications-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+  }
+
+  .class-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .class-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+
+      mat-icon {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+      }
+    }
+  }
+
+  .team-card,
+  .qualifications-card,
+  .class-info-card,
+  .additional-info-card {
+    mat-card-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      
+    }
+  }
+
+  /* Instructor Cards Section */
+  .instructor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+
+    .instructor-card {
+      flex: 1 1 calc(33.333% - 20px);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        margin: 10px 0;
+        font-size: 1.4rem;
+        
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #666;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  /* Qualifications Cards Section */
+  .qualifications-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+
+    .qualification-card {
+      flex: 1 1 calc(33.333% - 20px);
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s;
+
+      mat-icon {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      h3 {
+        margin: 10px 0;
+        font-size: 1.4rem;
+        
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #666;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  /* Media Queries for Responsive Design */
+  @media (max-width: 900px) {
+    .instructor-cards,
+    .qualifications-cards {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 10px;
+
+      .instructor-card,
+      .qualification-card {
+        flex: 0 0 80%;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .instructor-cards,
+    .qualifications-cards {
+      .instructor-card,
+      .qualification-card {
+        flex: 0 0 90%;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 10px;
+
+    .class-item {
+      align-items: flex-start;
+
+      mat-icon {
+        font-size: 1.2rem;
+        margin-top: 2px;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    mat-card-title {
+      font-size: 1.5rem;
+    }
+
+    mat-icon {
+      font-size: 1rem;
+    }
+  }
 }
