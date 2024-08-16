@@ -1,66 +1,114 @@
-<main class="class-details-page">
+<main class="class-details-page" layout="column" layout-align="start center">
     <!-- Intro Section -->
-    <section class="intro">
-        <h1>Class Details</h1>
-        <p>Welcome to our Taekwon-Do classes! Here you will find all the information you need about our classes, including schedules, seasonal details, and more.</p>
+    <section class="intro" layout="column" layout-align="start center">
+        <mat-card>
+            <mat-card-header>
+                <mat-icon>info</mat-icon>
+                <mat-card-title>Class Details</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>Welcome to our Taekwon-Do classes! Here you will find all the information you need about our classes, including schedules, seasonal details, and more.</p>
+            </mat-card-content>
+        </mat-card>
     </section>
 
     <!-- Timetable Section -->
-    <section class="timetable">
-        <h2>Class Timetable</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Time</th>
-                    <th>Class Type</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>7:00 PM - 7:45 PM</td>
-                    <td>6 to 8 year olds</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>7:45 PM - 8:30 PM</td>
-                    <td>under 13s</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>8:30 PM - 9:15 PM</td>
-                    <td>Over 13s and Seniors</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>7:45 PM - 8:30 PM</td>
-                    <td>under 13s</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>8:30 PM - 9:15 PM</td>
-                    <td>Over 13s and Seniors</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>10:00 AM - 11:00 AM</td>
-                    <td>4-6 year olds</td>
-                </tr>
-            </tbody>
-        </table>
+    <section class="timetable" layout="column" layout-align="start center">
+        <mat-card>
+            <mat-card-header>
+                <mat-icon>schedule</mat-icon>
+                <mat-card-title>Class Timetable</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <!-- Tuesday Timetable -->
+                <div class="day-timetable">
+                    <h3>Tuesday</h3>
+                    <table mat-table [dataSource]="tuesdayData" class="mat-elevation-z8">
+                        <ng-container matColumnDef="time">
+                            <th mat-header-cell *matHeaderCellDef> Time </th>
+                            <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="classType">
+                            <th mat-header-cell *matHeaderCellDef> Class Type </th>
+                            <td mat-cell *matCellDef="let element"> {{element.classType}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+
+                <!-- Friday Timetable -->
+                <div class="day-timetable">
+                    <h3>Friday</h3>
+                    <table mat-table [dataSource]="fridayData" class="mat-elevation-z8">
+                        <ng-container matColumnDef="time">
+                            <th mat-header-cell *matHeaderCellDef> Time </th>
+                            <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="classType">
+                            <th mat-header-cell *matHeaderCellDef> Class Type </th>
+                            <td mat-cell *matCellDef="let element"> {{element.classType}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+
+                <!-- Saturday Timetable -->
+                <div class="day-timetable">
+                    <h3>Saturday</h3>
+                    <table mat-table [dataSource]="saturdayData" class="mat-elevation-z8">
+                        <ng-container matColumnDef="time">
+                            <th mat-header-cell *matHeaderCellDef> Time </th>
+                            <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="classType">
+                            <th mat-header-cell *matHeaderCellDef> Class Type </th>
+                            <td mat-cell *matCellDef="let element"> {{element.classType}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
     </section>
 
     <!-- Seasonal Information Section -->
-    <section class="seasonal-info">
-        <h2>Seasonal Information</h2>
-        <p>Our classes are conducted throughout the year with short breaks during major holidays. Below is our general seasonal schedule:</p>
-        <ul>
-            <li><strong>Spring:</strong> March - May</li>
-            <li><strong>Summer:</strong> June - August</li>
-            <li><strong>Autumn:</strong> September - November</li>
-            <li><strong>Winter:</strong> December - February</li>
-        </ul>
-        <p>For exact class dates and any special events, please refer to our social media announcements or contact us directly.</p>
+    <section class="seasonal-info" layout="column" layout-align="start center">
+        <mat-card>
+            <mat-card-header>
+                <mat-icon>calendar_today</mat-icon>
+                <mat-card-title>Seasonal Information</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>Our classes are conducted throughout the year with short breaks during major holidays. Below is our general seasonal schedule:</p>
+                <mat-list>
+                    <mat-list-item>
+                        <mat-icon>flare</mat-icon>
+                        <strong>Spring:</strong> March - May
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon>wb_sunny</mat-icon>
+                        <strong>Summer:</strong> June - August
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon>terrain</mat-icon>
+                        <strong>Autumn:</strong> September - November
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon>ac_unit</mat-icon>
+                        <strong>Winter:</strong> December - February
+                    </mat-list-item>
+                </mat-list>
+                <p>For exact class dates and any special events, please refer to our social media announcements or contact us directly.</p>
+            </mat-card-content>
+        </mat-card>
     </section>
 </main>
