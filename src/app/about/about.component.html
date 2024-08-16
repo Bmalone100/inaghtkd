@@ -1,4 +1,6 @@
+<!-- about.component.html -->
 <div class="about-page">
+
   <!-- Banner Background Image -->
   <div class="banner-background">
     <div class="banner-content">
@@ -8,45 +10,113 @@
         </mat-card-title>
         <mat-card-content>
           <h2 class="club-name">Inagh Taekwon - Do</h2>
-          <p class="intro-text">Established in 20xx by Jamie Rigney, a 6th Degree Black Belt, the Inagh Taekwon-Do Club is a vibrant and welcoming ITF Taekwon-Do community in Clare. We offer classes for all ages and skill levels.</p>
-          <p class="mission-statement">Our club is dedicated to fostering a supportive environment where individuals can develop discipline, strength, agility, and overall physical fitness through high-quality Taekwon-Do training.</p>
+          <p class="intro-text">
+            Established in 20xx by Jamie Rigney, a 6th Degree Black Belt, the Inagh Taekwon-Do Club is a vibrant and welcoming ITF Taekwon-Do community in Clare. We offer classes for all ages and skill levels.
+          </p>
+          <p class="mission-statement">
+            Our club is dedicated to fostering a supportive environment where individuals can develop discipline, strength, agility, and overall physical fitness through high-quality Taekwon-Do training.
+          </p>
         </mat-card-content>
       </mat-card>
     </div>
   </div>
 
-  <!-- Class Information Section -->
-  <mat-card class="class-info-card">
-    <mat-card-title>
-      <mat-icon>library_books</mat-icon> Class Information
-    </mat-card-title>
-    <mat-card-content>
-      <p>We offer a range of Taekwon-Do classes tailored to different skill levels and age groups. Below is an overview of our current classes:</p>
-      <div class="class-info">
-        <div class="class-item">
-          <mat-icon>stars</mat-icon>
-          <div>
-            <h3>Beginner Classes</h3>
-            <p>Ideal for newcomers, these classes focus on the basics of Taekwon-Do, including fundamental techniques and forms.</p>
+  <!-- Container for Horizontal Layout -->
+  <div class="card-container">
+    <!-- Preparation for Class Card -->
+    <mat-card class="class-preparation-card">
+      <mat-card-title>
+        <mat-icon>fitness_center</mat-icon> Get Ready for Class
+      </mat-card-title>
+      <mat-card-content>
+        <div class="class-info">
+          <div class="class-item">
+            <mat-icon>sports_mma</mat-icon>
+            <div>
+              <h3>Gear Up</h3>
+              <p>Uniform, Belt, Gloves</p>
+            </div>
+          </div>
+          <div class="class-item">
+            <mat-icon>local_drink</mat-icon>
+            <div>
+              <h3>Stay Hydrated</h3>
+              <p>Bring a Water Bottle</p>
+            </div>
+          </div>
+          <div class="class-item">
+            <mat-icon>schedule</mat-icon>
+            <div>
+              <h3>Be On Time</h3>
+              <p>Arrive Early & Warm-Up</p>
+            </div>
           </div>
         </div>
-        <div class="class-item">
-          <mat-icon>stars</mat-icon>
-          <div>
-            <h3>Intermediate Classes</h3>
-            <p>For those who have mastered the basics, these classes build on foundational skills and introduce more advanced techniques and sparring.</p>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Class Information Card -->
+    <mat-card class="class-info-card">
+      <mat-card-title>
+        <mat-icon>library_books</mat-icon> Class Overview
+      </mat-card-title>
+      <mat-card-content>
+        <p>Our sessions focus on:</p>
+        <div class="class-info">
+          <div class="class-item">
+            <mat-icon>directions_run</mat-icon>
+            <div>
+              <h3>Conditioning</h3>
+              <p>Strength, Agility, Balance</p>
+            </div>
+          </div>
+          <div class="class-item">
+            <mat-icon>self_improvement</mat-icon>
+            <div>
+              <h3>Self Defense</h3>
+              <p>Awareness, Technique, Preparedness, Resilience</p>
+            </div>
+          </div>
+          <div class="class-item">
+            <mat-icon>sports_kabaddi</mat-icon>
+            <div>
+              <h3>Techniques</h3>
+              <p>Hand & Foot Mastery, Foundation for advancement</p>
+            </div>
+          </div>
+          <div class="class-item">
+            <mat-icon>sports_gymnastics</mat-icon>
+            <div>
+              <h3>Patterns</h3>
+              <p>Forms & Movements</p>
+            </div>
+          </div>
+          <div class="class-item">
+            <mat-icon>sports_martial_arts</mat-icon>
+            <div>
+              <h3>Sparring</h3>
+              <p>Fun, Competition & Fitness</p>
+            </div>
           </div>
         </div>
-        <div class="class-item">
-          <mat-icon>stars</mat-icon>
-          <div>
-            <h3>Advanced Classes</h3>
-            <p>These classes are designed for experienced practitioners looking to refine their skills, participate in competitions, and achieve higher belt ranks.</p>
-          </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- General Class Information Card -->
+    <mat-card class="class-general-info-card">
+      <mat-card-title>
+        <mat-icon>group</mat-icon> Join Us
+      </mat-card-title>
+      <mat-card-content>
+        <p>Open to all ages and skill levels. <a href="/classes">
+          <button mat-raised-button color="accent">Class Timetable</button>
+        </a></p>
+        <div class="image-container">
+          <img src="/assets/webImages/Cover.jpg" alt="Class Overview" />
         </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>  
+  </div>
 
   <!-- Qualifications Section -->
   <div class="qualifications-section">
@@ -98,18 +168,50 @@
       <mat-icon>group</mat-icon> Meet Our Team
     </mat-card-title>
     <mat-card-content>
-      <div class="instructor-cards">
-        <div class="instructor-card">
-          <img src="/assets/webImages/jaime.jpg" alt="Jamie Rigney" />
-          <h3>Jamie Rigney</h3>
-          <p>6th Degree Black Belt</p>
+      <div class="carousel-container">
+        <button mat-icon-button class="carousel-nav prev" (click)="prevSlide()">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <div class="instructor-cards" #instructorCards>
+          <div class="instructor-card">
+            <img src="/assets/webImages/jaime.jpg" alt="Jamie Rigney" />
+            <h3>Jamie Rigney</h3>
+            <p>6th Degree Black Belt</p>
+          </div>
+          <div class="instructor-card">
+            <img src="/assets/webImages/darren-rigney.jpg" alt="Darren Rigney" />
+            <h3>Darren Rigney</h3>
+            <p>4th Degree Black Belt</p>
+          </div>
+          <div class="instructor-card">
+            <img src="/assets/webImages/declan-devereaux.jpg" alt="Declan Devereaux" />
+            <h3>Declan Devereaux</h3>
+            <p>3rd Degree Black Belt</p>
+          </div>
+          <div class="instructor-card">
+            <img src="/assets/webImages/brian-malone.jpg" alt="Brian Malone" />
+            <h3>Brian Malone</h3>
+            <p>3rd Degree Black Belt</p>
+          </div>
+          <div class="instructor-card">
+            <img src="/assets/webImages/chloe-lin.jpg" alt="Chloe Lin" />
+            <h3>Chloe Lin</h3>
+            <p>3rd Degree Black Belt</p>
+          </div>
+          <div class="instructor-card">
+            <img src="/assets/webImages/ciara-white.jpg" alt="Ciara White" />
+            <h3>Ciara White</h3>
+            <p>2nd Degree Black Belt</p>
+          </div>
+          <div class="instructor-card">
+            <img src="/assets/webImages/jeffrey-lin.jpg" alt="Jeffrey Lin" />
+            <h3>Jeffrey Lin</h3>
+            <p>2nd Degree Black Belt</p>
+          </div>
         </div>
-        <div class="instructor-card">
-          <img src="/assets/images/darren-rigney.jpg" alt="Darren Rigney" />
-          <h3>Darren Rigney</h3>
-          <p>4th Degree Black Belt</p>
-        </div>
-        <!-- Add more instructor cards here -->
+        <button mat-icon-button class="carousel-nav next" (click)="nextSlide()">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
       </div>
     </mat-card-content>
   </mat-card>
@@ -121,7 +223,8 @@
     </mat-card-title>
     <mat-card-content>
       <p>Here you can find more details about our club, our philosophy, and how to get in touch with us.</p>
-      <p>We are committed to providing the best Taekwon-Do experience and fostering a supportive community.</p>
+      <p>We are committed to providing the best Taekwon-Do experience and look forward to seeing you at our next class!</p>
     </mat-card-content>
   </mat-card>
+
 </div>

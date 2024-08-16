@@ -6,8 +6,8 @@
 
   .banner-background {
     position: relative;
-    height: 300px;
-    background: url('/assets/webImages/leftbanner.jpg') no-repeat top center;
+    height: 900px;
+    background: url('/assets/webImages/leftbanner.jpg') no-repeat top 15% center;
     background-size: cover;
     border-radius: 8px;
     overflow: hidden;
@@ -17,25 +17,54 @@
 
     .banner-content {
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       width: 80%;
       text-align: center;
       z-index: 1;
       padding: 20px;
       border-radius: 8px;
+      background: rgba(255, 255, 255, 0.8);
 
       mat-card {
-        background: rgba(255, 255, 255, 0.8);
+        background: transparent;
         border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 16px;
+        box-shadow: none;
+        padding: 0;
       }
-      h1, h2, h3, p {
-        color: white; /* White text color for contrast */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds a shadow to make text pop */
-        font-weight: bold; /* Make text bold */
+
+      mat-card-title {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        color: royalblue;
+        margin-bottom: 10px;
+      }
+
+      .club-name {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: royalblue;
+      }
+
+      .intro-text,
+      .mission-statement {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        .club-name {
+          font-size: 2rem;
+        }
+
+        .intro-text,
+        .mission-statement {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -56,12 +85,10 @@
     display: flex;
     align-items: center;
     font-size: 1.8rem;
-    
   }
 
   .club-name {
     font-size: 1.8rem;
-    
     margin-bottom: 10px;
   }
 
@@ -120,59 +147,123 @@
     }
   }
 
-  .team-card,
-  .qualifications-card,
+  .card-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+
   .class-info-card,
-  .additional-info-card {
-    mat-card-title {
-      display: flex;
-      align-items: center;
-      font-size: 1.8rem;
-      
+  .class-preparation-card,
+  .class-general-info-card {
+    flex: 1 1 30%;
+    max-width: 30%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
   }
 
-  /* Instructor Cards Section */
+  .image-container {
+    margin-top: 16px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
   .instructor-cards {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * 3);
+  }
 
-    .instructor-card {
-      flex: 1 1 calc(33.333% - 20px);
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 16px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
+  .instructor-card {
+    flex: 0 0 auto;
+    width: calc(100% / 3);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
       transition: transform 0.3s;
 
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
-        margin-bottom: 10px;
-      }
-
-      h3 {
-        margin: 10px 0;
-        font-size: 1.4rem;
-        
-      }
-
-      p {
-        font-size: 1.1rem;
-        color: #666;
-      }
-
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
       }
     }
   }
 
-  /* Qualifications Cards Section */
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    z-index: 10;
+    border: none;
+
+    mat-icon {
+      font-size: 2rem;
+      color: royalblue;
+    }
+
+    &.prev {
+      left: 10px;
+    }
+
+    &.next {
+      right: 10px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   .qualifications-cards {
     display: flex;
     flex-wrap: wrap;
@@ -198,7 +289,6 @@
       h3 {
         margin: 10px 0;
         font-size: 1.4rem;
-        
       }
 
       p {
@@ -236,10 +326,6 @@
         flex: 0 0 90%;
       }
     }
-  }
-
-  @media (max-width: 600px) {
-    padding: 10px;
 
     .class-item {
       align-items: flex-start;
