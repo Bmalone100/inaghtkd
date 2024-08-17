@@ -15,16 +15,18 @@ mat-toolbar {
   .nav-links {
     display: flex;
     gap: 15px;
+    align-items: center; /* Align the items vertically */
 
     a {
       display: flex;
-      align-items: center;
+      align-items: center; /* Ensure icons and text are aligned */
       gap: 8px;
       text-transform: uppercase;
       font-weight: bold;
 
       mat-icon {
         font-size: 1.2rem;
+        vertical-align: middle; /* Align the icon vertically with text */
       }
     }
   }
@@ -41,7 +43,7 @@ mat-toolbar {
   }
 
   .spacer {
-    flex: 1 1 auto;
+    flex-grow: 1; /* Takes up available space, pushing nav-logos to the right */
   }
 }
 

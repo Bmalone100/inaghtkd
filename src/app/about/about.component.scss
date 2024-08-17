@@ -149,19 +149,29 @@
 
   .card-container {
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .scrollable-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
     padding: 0 5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    mat-card {
+      flex: 0 0 calc(25% - 20px); // Adjust width to fit 4 cards side-by-side with gaps
+      max-width: calc(25% - 20px); // Ensure the card does not exceed its width
+      box-sizing: border-box;
+    }
   }
 
   .class-info-card,
   .class-preparation-card,
-  .class-general-info-card {
-    flex: 1 1 30%;
-    max-width: 30%;
-    box-sizing: border-box;
+  .class-general-info-card,
+  .team-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
@@ -189,7 +199,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: none;
     border-radius: 4px;
   }
 
@@ -204,35 +214,82 @@
   .instructor-cards {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: calc(100% * 3);
+    width: 100%;
+    flex-wrap: nowrap; // Ensure cards do not wrap
   }
 
   .instructor-card {
-    flex: 0 0 auto;
-    width: calc(100% / 3);
+    flex: 0 0 100%; // Ensure each card takes up full container width
     box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
     overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
 
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
+    .card-background {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
 
-    img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-      transition: transform 0.3s;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.3; // Adjust opacity for background image
+      }
 
-      &:hover {
-        transform: scale(1.1);
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); // Semi-transparent overlay
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        flex-direction: column;
+        color: white;
+
+        .profile {
+          position: absolute;
+          top: 15%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white; // Border for profile image
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            opacity: 1; // Ensure profile image has regular opacity
+          }
+        }
+
+        .description {
+          position: absolute;
+          bottom: 20px;
+          text-align: center;
+
+          h3 {
+            margin: 0;
+            font-size: 1.4rem;
+          }
+
+          p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+          }
+        }
       }
     }
   }
@@ -266,12 +323,16 @@
 
   .qualifications-cards {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
-    justify-content: space-between;
+    overflow-x: auto;
+    padding: 0 5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 
     .qualification-card {
-      flex: 1 1 calc(33.333% - 20px);
+      flex: 0 0 calc(25% - 20px); // Adjust width to fit 4 cards side-by-side with gaps
+      max-width: calc(25% - 20px); // Ensure the card does not exceed its width
       background-color: #f9f9f9;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -304,26 +365,25 @@
 
   /* Media Queries for Responsive Design */
   @media (max-width: 900px) {
-    .instructor-cards,
+    .scrollable-container,
     .qualifications-cards {
-      flex-wrap: nowrap;
       overflow-x: auto;
       padding-bottom: 10px;
 
-      .instructor-card,
-      .qualification-card {
-        flex: 0 0 80%;
+      mat-card {
+        flex: 0 0 80%; // Adjust card size for smaller screens
+        max-width: 80%;
         margin-right: 10px;
       }
     }
   }
 
   @media (max-width: 600px) {
-    .instructor-cards,
+    .scrollable-container,
     .qualifications-cards {
-      .instructor-card,
-      .qualification-card {
-        flex: 0 0 90%;
+      mat-card {
+        flex: 0 0 90%; // Further adjust for very small screens
+        max-width: 90%;
       }
     }
 

@@ -3,12 +3,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { MatIcon } from '@angular/material/icon';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-classes',
   standalone: true,
-  imports: [MatCardModule, MatTableModule, MatListModule, MatIcon, FlexLayoutModule],
+  imports: [MatCardModule, MatTableModule, MatListModule, MatIcon],
   templateUrl: './classes.component.html',
   styleUrls: ['./classes.component.scss']
 })
