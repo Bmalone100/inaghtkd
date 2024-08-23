@@ -1,19 +1,19 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav mode="over" [(opened)]="isSidenavOpen">
     <mat-nav-list>
-      <a mat-list-item href="/" (click)="sidenav.close()">
+      <a mat-list-item [routerLink]="['/']" routerLinkActive="active-link" (click)="sidenav.close()">
         <mat-icon>home</mat-icon>
         Home
       </a>
-      <a mat-list-item href="/about" (click)="sidenav.close()">
+      <a mat-list-item [routerLink]="['/about']" routerLinkActive="active-link" (click)="sidenav.close()">
         <mat-icon>info</mat-icon>
         About
       </a>
-      <a mat-list-item href="/classes" (click)="sidenav.close()">
+      <a mat-list-item [routerLink]="['/classes']" routerLinkActive="active-link" (click)="sidenav.close()">
         <mat-icon>school</mat-icon>
         Class Info
       </a>
-      <a mat-list-item href="/contact" (click)="sidenav.close()">
+      <a mat-list-item [routerLink]="['/contact']" routerLinkActive="active-link" (click)="sidenav.close()">
         <mat-icon>contact_mail</mat-icon>
         Contact
       </a>
@@ -22,37 +22,38 @@
 
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
-        <mat-icon>menu</mat-icon>
-      </button>
-
-      <span class="app-title">Inagh Taekwon-Do</span>
-
-      <span class="spacer"></span>
-
-      <div class="nav-links" fxHide fxShow.gt-sm>
-        <a mat-button href="/">
-          <mat-icon>home</mat-icon>
-          Home
-        </a>
-        <a mat-button href="/about">
-          <mat-icon>info</mat-icon>
-          About
-        </a>
-        <a mat-button href="/classes">
-          <mat-icon>school</mat-icon>
-          Class Info
-        </a>
-        <a mat-button href="/contact">
-          <mat-icon>contact_mail</mat-icon>
-          Contact
-        </a>
-      </div>
-
+      <!-- Move logos to the left and adjust size -->
       <div class="nav-logos">
         <img src="assets/icons/ita_logo1.png" alt="ITA Logo" class="logo">
         <img src="assets/icons/ita_logo2.png" alt="ITA Logo 2" class="logo">
         <img src="assets/icons/itf.png" alt="ITF Logo" class="logo">
+      </div>
+
+      <!-- <span class="app-title">Inagh Taekwon-Do</span> -->
+
+      <span class="spacer"></span>
+
+      <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <div class="nav-links" fxHide fxShow.gt-sm>
+        <a mat-button [routerLink]="['/']" routerLinkActive="active-link">
+          <mat-icon>home</mat-icon>
+          Home
+        </a>
+        <a mat-button [routerLink]="['/about']" routerLinkActive="active-link">
+          <mat-icon>info</mat-icon>
+          About
+        </a>
+        <a mat-button [routerLink]="['/classes']" routerLinkActive="active-link">
+          <mat-icon>school</mat-icon>
+          Class Info
+        </a>
+        <a mat-button [routerLink]="['/contact']" routerLinkActive="active-link">
+          <mat-icon>contact_mail</mat-icon>
+          Contact
+        </a>
       </div>
     </mat-toolbar>
 

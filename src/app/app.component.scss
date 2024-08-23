@@ -4,76 +4,82 @@
 
 mat-toolbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Center items vertically */
   padding: 0 5%;
+  height: 60px; /* Define a height for the toolbar */
+}
 
-  .menu-button {
-    display: none; /* Hide the hamburger menu button by default */
-  }
+.menu-button {
+  display: none; /* Hide the hamburger menu button by default */
+}
 
-  .nav-links {
-    display: flex;
-    gap: 15px;
-    align-items: center; /* Align the items vertically */
+.nav-logos {
+  display: flex;
+  align-items: center; /* Center logos vertically */
+  gap: 10px; /* Adjust gap between logos if needed */
+  margin-right: 15px; /* Add margin to separate logos from the title */
+}
 
-    a {
-      display: flex;
-      align-items: center; /* Ensure icons and text are aligned */
-      gap: 8px;
-      text-transform: uppercase;
-      font-weight: bold;
+.logo {
+  max-height: 40px; /* Ensure logos are not larger than this height */
+  width: auto;  /* Maintain aspect ratio */
+}
 
-      mat-icon {
-        font-size: 1.2rem;
-        vertical-align: middle; /* Align the icon vertically with text */
-      }
-    }
-  }
+.app-title {
+  flex-grow: 1; /* Takes up available space, pushing menu button to the right */
+  text-align: center; /* Center the title text */
+}
 
-  .nav-logos {
-    display: flex;
-    align-items: flex-end; /* Align logos by their bottom edge */
-    gap: 15px;
+.spacer {
+  flex-grow: 1; /* Takes up available space, pushing nav-links to the right */
+}
 
-    .logo {
-      height: 40px; /* Uniform height for all logos */
-      width: auto;  /* Maintain aspect ratio */
-    }
-  }
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center; /* Align the items vertically */
+}
 
-  .spacer {
-    flex-grow: 1; /* Takes up available space, pushing nav-logos to the right */
-  }
+.nav-links a {
+  display: flex;
+  align-items: center; /* Ensure icons and text are aligned */
+  gap: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none; /* Ensure no underline on links */
+  color: inherit; /* Inherit color from parent */
+}
+
+.nav-links mat-icon {
+  font-size: 1.2rem;
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 600px) {
-  mat-toolbar {
-    .menu-button {
-      display: inline-flex; /* Show the hamburger menu button on smaller screens */
-    }
+  .menu-button {
+    display: inline-flex; /* Show the hamburger menu button on smaller screens */
+  }
 
-    .nav-links {
-      display: none; /* Hide the full navigation links */
-    }
+  .nav-links {
+    display: none; /* Hide the full navigation links */
+  }
 
-    .nav-logos {
-      justify-content: flex-end;
+  .nav-logos {
+    gap: 5px; /* Adjust gap between logos on smaller screens */
+  }
 
-      .logo {
-        height: 30px; /* Adjust logo size for smaller screens */
-      }
-    }
+  .logo {
+    max-height: 30px; /* Adjust maximum height for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   mat-toolbar {
-    padding: 0 2%;
+    padding: 0 2%; /* Reduce padding on very small screens */
+    height: 50px; /* Adjust toolbar height for very small screens */
+  }
 
-    .nav-logos .logo {
-      height: 25px; /* Further reduce logo size for very small screens */
-    }
+  .logo {
+    max-height: 25px; /* Further reduce maximum height for very small screens */
   }
 }
