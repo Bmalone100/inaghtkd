@@ -2,7 +2,9 @@ import { Component, ElementRef, Renderer2, ViewChild, AfterViewInit } from '@ang
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { environment
 
+ } from '../../environment.prod';
 @Component({
   selector: 'app-about',
   standalone: true,
@@ -11,6 +13,17 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements AfterViewInit {
+  public bannerImage: string = `${environment.assetPath}leftbanner.jpg`;
+  public instructorImages: { [key: string]: string } = {
+    jaime: `${environment.assetPath}jaime.jpg`,
+    darren: `${environment.assetPath}darren-rigney.jpg`,
+    declan: `${environment.assetPath}declan-devereaux.jpg`,
+    brian: `${environment.assetPath}brian-malone.jpg`,
+    chloe: `${environment.assetPath}chloe-lin.jpg`,
+    ciara: `${environment.assetPath}ciara-white.jpg`,
+    jeffrey: `${environment.assetPath}jeffrey-lin.jpg`
+  };
+
   @ViewChild('instructorCards') instructorCards!: ElementRef;
   currentIndex = 0;
 

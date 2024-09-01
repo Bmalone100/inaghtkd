@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
+import { environment } from '../environment.prod';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,4 +17,7 @@ import { MatListModule } from '@angular/material/list';
 export class AppComponent {
   title = 'inaghtkd';
   isSidenavOpen = false;
+  public logo1: string = `${environment.assetLogoPath}ita_logo1.png`;
+  public logo2: string = `${environment.assetLogoPath}ita_logo2.png`;
+  public logo3: string = `${environment.assetLogoPath}itf.png`;
 }

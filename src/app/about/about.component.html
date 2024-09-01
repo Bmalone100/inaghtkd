@@ -1,8 +1,6 @@
-<!-- about.component.html -->
 <div class="about-page">
-
   <!-- Banner Background Image -->
-  <div class="banner-background">
+  <div class="banner-background" [ngStyle]="{'background-image': 'url(' + bannerImage + ')'}">
     <div class="banner-content">
       <mat-card>
         <mat-card-title>
@@ -21,246 +19,248 @@
     </div>
   </div>
 
- <!-- Container for Horizontal Layout -->
-<div class="card-container">
-  <div class="scrollable-container">
-    <!-- Preparation for Class Card -->
-    <mat-card class="class-preparation-card">
-      <mat-card-title>
-        <mat-icon>fitness_center</mat-icon> Get Ready for Class
-      </mat-card-title>
-      <mat-card-content>
-        <div class="class-info">
-          <div class="class-item">
-            <mat-icon>sports_mma</mat-icon>
-            <div>
-              <h3>Gear Up</h3>
-              <p>Uniform, Belt, Gloves</p>
+  <!-- Container for Horizontal Layout -->
+  <div class="card-container">
+    <div class="scrollable-container">
+      <!-- Preparation for Class Card -->
+      <mat-card class="class-preparation-card">
+        <mat-card-title>
+          <mat-icon>fitness_center</mat-icon> Get Ready for Class
+        </mat-card-title>
+        <mat-card-content>
+          <div class="class-info">
+            <div class="class-item">
+              <mat-icon>sports_mma</mat-icon>
+              <div>
+                <h3>Gear Up</h3>
+                <p>Uniform, Belt, Gloves</p>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>local_drink</mat-icon>
+              <div>
+                <h3>Stay Hydrated</h3>
+                <p>Bring a Water Bottle</p>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>schedule</mat-icon>
+              <div>
+                <h3>Be On Time</h3>
+                <p>Arrive Early & Warm-Up</p>
+              </div>
             </div>
           </div>
-          <div class="class-item">
-            <mat-icon>local_drink</mat-icon>
-            <div>
-              <h3>Stay Hydrated</h3>
-              <p>Bring a Water Bottle</p>
-            </div>
-          </div>
-          <div class="class-item">
-            <mat-icon>schedule</mat-icon>
-            <div>
-              <h3>Be On Time</h3>
-              <p>Arrive Early & Warm-Up</p>
-            </div>
-          </div>
-        </div>
-      </mat-card-content>
-    </mat-card>
+        </mat-card-content>
+      </mat-card>
 
-    <!-- Class Information Card -->
-    <mat-card class="class-info-card">
-      <mat-card-title>
-        <mat-icon>library_books</mat-icon> Class Overview
-      </mat-card-title>
-      <mat-card-content>
-        <p>Our sessions focus on:</p>
-        <div class="class-info">
-          <div class="class-item">
-            <mat-icon>directions_run</mat-icon>
-            <div>
-              <h3>Conditioning</h3>
-              <p>Strength, Agility, Balance</p>
+      <!-- Class Information Card -->
+      <mat-card class="class-info-card">
+        <mat-card-title>
+          <mat-icon>library_books</mat-icon> Class Overview
+        </mat-card-title>
+        <mat-card-content>
+          <p>Our sessions focus on:</p>
+          <div class="class-info">
+            <div class="class-item">
+              <mat-icon>directions_run</mat-icon>
+              <div>
+                <h3>Conditioning</h3>
+                <p>Strength, Agility, Balance</p>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>self_improvement</mat-icon>
+              <div>
+                <h3>Self Defense</h3>
+                <p>Awareness, Technique, Preparedness, Resilience</p>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>sports_kabaddi</mat-icon>
+              <div>
+                <h3>Techniques</h3>
+                <p>Hand & Foot Mastery, Foundation for advancement</p>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>sports_gymnastics</mat-icon>
+              <div>
+                <h3>Patterns</h3>
+                <p>Forms & Movements</p>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>sports_martial_arts</mat-icon>
+              <div>
+                <h3>Sparring</h3>
+                <p>Fun, Competition & Fitness</p>
+              </div>
             </div>
           </div>
-          <div class="class-item">
-            <mat-icon>self_improvement</mat-icon>
-            <div>
-              <h3>Self Defense</h3>
-              <p>Awareness, Technique, Preparedness, Resilience</p>
-            </div>
-          </div>
-          <div class="class-item">
-            <mat-icon>sports_kabaddi</mat-icon>
-            <div>
-              <h3>Techniques</h3>
-              <p>Hand & Foot Mastery, Foundation for advancement</p>
-            </div>
-          </div>
-          <div class="class-item">
-            <mat-icon>sports_gymnastics</mat-icon>
-            <div>
-              <h3>Patterns</h3>
-              <p>Forms & Movements</p>
-            </div>
-          </div>
-          <div class="class-item">
-            <mat-icon>sports_martial_arts</mat-icon>
-            <div>
-              <h3>Sparring</h3>
-              <p>Fun, Competition & Fitness</p>
-            </div>
-          </div>
-        </div>
-      </mat-card-content>
-    </mat-card>
+        </mat-card-content>
+      </mat-card>
 
-    <!-- Qualifications -->
-    <mat-card class="class-info-card">
-      <mat-card-title>
-        <mat-icon>school</mat-icon> Qualifications
-      </mat-card-title>
-      <mat-card-content>
-        <div class="class-info">
-          <div class="class-item">
-            <mat-icon>verified</mat-icon>
-            <div>
-              <h3>Certified ITF Black Belts</h3>
+      <!-- Qualifications -->
+      <mat-card class="class-info-card">
+        <mat-card-title>
+          <mat-icon>school</mat-icon> Qualifications
+        </mat-card-title>
+        <mat-card-content>
+          <div class="class-info">
+            <div class="class-item">
+              <mat-icon>verified</mat-icon>
+              <div>
+                <h3>Certified ITF Black Belts</h3>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>star_border</mat-icon>
+              <div>
+                <h3>Garda Vetted through IMAC</h3>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>security</mat-icon>
+              <div>
+                <h3>Sport Ireland Safeguarding Certified</h3>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>checklist</mat-icon>
+              <div>
+                <h3>Sport Ireland Certified Coaches</h3>
+              </div>
+            </div>
+            <div class="class-item">
+              <mat-icon>healing</mat-icon>
+              <div>
+                <h3>First Aid Certified</h3>
+              </div>
             </div>
           </div>
-          <div class="class-item">
-            <mat-icon>star_border</mat-icon>
-            <div>
-              <h3>Garda Vetted through IMAC</h3>
-            </div>
-          </div>
-          <div class="class-item">
-            <mat-icon>security</mat-icon>
-            <div>
-              <h3>Sport Ireland Safeguarding Certified</h3>
-            </div>
-          </div>
-          <div class="class-item">
-            <mat-icon>checklist</mat-icon>
-            <div>
-              <h3>Sport Ireland Certified Coaches</h3>
-            </div>
-          </div>
-          <div class="class-item">
-            <mat-icon>healing</mat-icon>
-            <div>
-              <h3>First Aid Certified</h3>
-            </div>
-          </div>
-        </div>
-      </mat-card-content>
-    </mat-card>
+        </mat-card-content>
+      </mat-card>
 
-    <!-- Team Section -->
-<mat-card class="team-card">
-  <mat-card-title>
-    <mat-icon>group</mat-icon> Meet Our Team
-  </mat-card-title>
-  <mat-card-content>
-    <div class="carousel-container">
-      <button mat-icon-button class="carousel-nav prev" (click)="prevSlide()">
-        <mat-icon>arrow_back</mat-icon>
-      </button>
-      <div class="instructor-cards" #instructorCards>
-        <!-- Existing Instructor Card -->
-        <div class="instructor-card">
-          <div class="card-background">
-            <img src="/assets/webImages/jaime.jpg" alt="Jamie Rigney" />
-            <div class="overlay">
-              <div class="profile">
-                <img src="/assets/webImages/jaime.jpg" alt="Jamie Rigney" />
+      <!-- Team Section -->
+      <mat-card class="team-card">
+        <mat-card-title>
+          <mat-icon>group</mat-icon> Meet Our Team
+        </mat-card-title>
+        <mat-card-content>
+          <div class="carousel-container">
+            <button mat-icon-button class="carousel-nav prev" (click)="prevSlide()">
+              <mat-icon>arrow_back</mat-icon>
+            </button>
+            <div class="instructor-cards" #instructorCards>
+              <!-- Existing Instructor Card -->
+              <div class="instructor-card">
+                <div class="card-background">
+                  <img [src]="instructorImages['jaime']" alt="Jamie Rigney" />
+                  <div class="overlay">
+                    <div class="profile">
+                      <img [src]="instructorImages['jaime']" alt="Jamie Rigney" />
+                    </div>
+                    <div class="description">
+                      <h3>Jamie Rigney</h3>
+                      <p>6th Degree Black Belt</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="description">
-                <h3>Jamie Rigney</h3>
-                <p>6th Degree Black Belt</p>
+              <!-- Additional Instructor Cards -->
+              <div class="instructor-card">
+                <div class="card-background">
+                  <img [src]="instructorImages['darren']" alt="Darren Rigney" />
+                  <div class="overlay">
+                    <div class="profile">
+                      <img [src]="instructorImages['darren']" alt="Darren Rigney" />
+                    </div>
+                    <div class="description">
+                      <h3>Darren Rigney</h3>
+                      <p>4th Degree Black Belt</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="instructor-card">
+                <div class="card-background">
+                  <img [src]="instructorImages['declan']" alt="Declan Devereaux" />
+                  <div class="overlay">
+                    <div class="profile">
+                      <img [src]="instructorImages['declan']" alt="Declan Devereaux" />
+                    </div>
+                    <div class="description">
+                      <h3>Declan Devereaux</h3>
+                      <p>3rd Degree Black Belt</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="instructor-card">
+                <div class="card-background">
+                  <img [src]="instructorImages['brian']" alt="Brian Malone" />
+                  <div class="overlay">
+                    <div class="profile">
+                      <img [src]="instructorImages['brian']" alt="Brian Malone" />
+                    </div>
+                    <div class="description">
+                      <h3>Brian Malone</h3>
+                      <p>3rd Degree Black Belt</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="instructor-card">
+                <div class="card-background">
+                  <img [src]="instructorImages['chloe']" alt="Chloe Lin" />
+                  <div class="overlay">
+                    <div class="profile">
+                      <img [src]="instructorImages['chloe']" alt="Chloe Lin" />
+                    </div>
+                    <div class="description">
+                      <h3>Chloe Lin</h3>
+                      <p>3rd Degree Black Belt</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="instructor-card">
+                <div class="card-background">
+                  <img [src]="instructorImages['ciara']" alt="Ciara White" />
+                  <div class="overlay">
+                    <div class="profile">
+                      <img [src]="instructorImages['ciara']" alt="Ciara White" />
+                    </div>
+                    <div class="description">
+                      <h3>Ciara White</h3>
+                      <p>2nd Degree Black Belt</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="instructor-card">
+                <div class="card-background">
+                  <img [src]="instructorImages['jeffrey']" alt="Jeffrey Lin" />
+                  <div class="overlay">
+                    <div class="profile">
+                      <img [src]="instructorImages['jeffrey']" alt="Jeffrey Lin" />
+                    </div>
+                    <div class="description">
+                      <h3>Jeffrey Lin</h3>
+                      <p>2nd Degree Black Belt</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Additional instructor cards can be added here -->
             </div>
+            <button mat-icon-button class="carousel-nav next" (click)="nextSlide()">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
           </div>
-        </div>
-        <!-- Additional Instructor Cards -->
-        <div class="instructor-card">
-          <div class="card-background">
-            <img src="/assets/webImages/darren-rigney.jpg" alt="Darren Rigney" />
-            <div class="overlay">
-              <div class="profile">
-                <img src="/assets/webImages/darren-rigney.jpg" alt="Darren Rigney" />
-              </div>
-              <div class="description">
-                <h3>Darren Rigney</h3>
-                <p>4th Degree Black Belt</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="instructor-card">
-          <div class="card-background">
-            <img src="/assets/webImages/declan-devereaux.jpg" alt="Declan Devereaux" />
-            <div class="overlay">
-              <div class="profile">
-                <img src="/assets/webImages/declan-devereaux.jpg" alt="Declan Devereaux" />
-              </div>
-              <div class="description">
-                <h3>Declan Devereaux</h3>
-                <p>3rd Degree Black Belt</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="instructor-card">
-          <div class="card-background">
-            <img src="/assets/webImages/brian-malone.jpg" alt="Brian Malone" />
-            <div class="overlay">
-              <div class="profile">
-                <img src="/assets/webImages/brian-malone.jpg" alt="Brian Malone" />
-              </div>
-              <div class="description">
-                <h3>Brian Malone</h3>
-                <p>3rd Degree Black Belt</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="instructor-card">
-          <div class="card-background">
-            <img src="/assets/webImages/chloe-lin.jpg" alt="Chloe Lin" />
-            <div class="overlay">
-              <div class="profile">
-                <img src="/assets/webImages/chloe-lin.jpg" alt="Chloe Lin" />
-              </div>
-              <div class="description">
-                <h3>Chloe Lin</h3>
-                <p>3rd Degree Black Belt</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="instructor-card">
-          <div class="card-background">
-            <img src="/assets/webImages/ciara-white.jpg" alt="Ciara White" />
-            <div class="overlay">
-              <div class="profile">
-                <img src="/assets/webImages/ciara-white.jpg" alt="Ciara White" />
-              </div>
-              <div class="description">
-                <h3>Ciara White</h3>
-                <p>2nd Degree Black Belt</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="instructor-card">
-          <div class="card-background">
-            <img src="/assets/webImages/jeffrey-lin.jpg" alt="Jeffrey Lin" />
-            <div class="overlay">
-              <div class="profile">
-                <img src="/assets/webImages/jeffrey-lin.jpg" alt="Jeffrey Lin" />
-              </div>
-              <div class="description">
-                <h3>Jeffrey Lin</h3>
-                <p>2nd Degree Black Belt</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Additional instructor cards can be added here -->
-      </div>
-      <button mat-icon-button class="carousel-nav next" (click)="nextSlide()">
-        <mat-icon>arrow_forward</mat-icon>
-      </button>
+        </mat-card-content>
+      </mat-card>
     </div>
-  </mat-card-content>
-</mat-card>
+  </div>
 </div>
