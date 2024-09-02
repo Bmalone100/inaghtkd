@@ -20,4 +20,9 @@ export class AppComponent {
   public logo1: string = `${environment.assetLogoPath}ita_logo1.png`;
   public logo2: string = `${environment.assetLogoPath}ita_logo2.png`;
   public logo3: string = `${environment.assetLogoPath}itf.png`;
+  public homeRoute: string = `${environment.homePath}`;
+  public aboutRoute: string = `${environment.aboutPath}`;
+  public classesRoute: string = `${environment.classesPath}`;
+  public contactRoute: string = `${environment.contactPath}`;
+
 }

@@ -13,4 +13,5 @@ import { environment } from '../../environment.prod';
 })
 export class HomeComponent {
   public backgroundImage: string = `${environment.assetPath}tkdbg.jpg`;
+  public aboutRoute: string = `${environment.aboutPath}`;
 }

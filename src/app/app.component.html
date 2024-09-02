@@ -1,19 +1,19 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav mode="over" [(opened)]="isSidenavOpen">
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['/']" routerLinkActive="active-link" (click)="sidenav.close()">
+      <a mat-list-item [routerLink]="[homeRoute]" routerLinkActive="active-link" (click)="sidenav.close()">
         <mat-icon>home</mat-icon>
         Home
       </a>
-      <a mat-list-item [routerLink]="['/about']" routerLinkActive="active-link" (click)="sidenav.close()">
+      <a mat-list-item [routerLink]="[aboutRoute]" routerLinkActive="active-link" (click)="sidenav.close()">
         <mat-icon>info</mat-icon>
         About
       </a>
-      <a mat-list-item [routerLink]="['/classes']" routerLinkActive="active-link" (click)="sidenav.close()">
+      <a mat-list-item [routerLink]="[classesRoute]" routerLinkActive="active-link" (click)="sidenav.close()">
         <mat-icon>school</mat-icon>
         Class Info
       </a>
-      <a mat-list-item [routerLink]="['/contact']" routerLinkActive="active-link" (click)="sidenav.close()">
+      <a mat-list-item [routerLink]="[contactRoute]" routerLinkActive="active-link" (click)="sidenav.close()">
         <mat-icon>contact_mail</mat-icon>
         Contact
       </a>
@@ -38,19 +38,19 @@
       </button>
 
       <div class="nav-links" fxHide fxShow.gt-sm>
-        <a mat-button [routerLink]="['/']" routerLinkActive="active-link">
+        <a mat-button [routerLink]="[homeRoute]" routerLinkActive="active-link">
           <mat-icon>home</mat-icon>
           Home
         </a>
-        <a mat-button [routerLink]="['/about']" routerLinkActive="active-link">
+        <a mat-button [routerLink]="[aboutRoute]" routerLinkActive="active-link">
           <mat-icon>info</mat-icon>
           About
         </a>
-        <a mat-button [routerLink]="['/classes']" routerLinkActive="active-link">
+        <a mat-button [routerLink]="[classesRoute]" routerLinkActive="active-link">
           <mat-icon>school</mat-icon>
           Class Info
         </a>
-        <a mat-button [routerLink]="['/contact']" routerLinkActive="active-link">
+        <a mat-button [routerLink]="[contactRoute]" routerLinkActive="active-link">
           <mat-icon>contact_mail</mat-icon>
           Contact
         </a>
