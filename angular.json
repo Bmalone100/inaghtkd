@@ -16,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs/Inaghtkd",
+            "outputPath": "docs",
             "baseHref": "/Inaghtkd/",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -37,7 +37,7 @@
           },
           "configurations": {
             "production": {
-              "outputPath": "docs/Inaghtkd",
+              "outputPath": "docs",
               "baseHref": "/Inaghtkd/",
               "outputHashing": "all"
             },
