@@ -2,9 +2,9 @@ export const environment = {
     production: true,
     assetPath: '/assets/webImages/',
     assetLogoPath: '/assets/icons/',
-    homePath: '/Inaghtkd/',
-    aboutPath: '/Inaghtkd/about/',
-    classesPath: '/Inaghtkd/classes/',
-    contactPath: '/Inaghtkd/contact/',
-    adminPath: '/Inaghtkd/admin/'
+    homePath: '/inaghtkd/',
+    aboutPath: '/inaghtkd/about/',
+    classesPath: '/inaghtkd/classes/',
+    contactPath: '/inaghtkd/contact/',
+    adminPath: '/inaghtkd/admin/'
   };

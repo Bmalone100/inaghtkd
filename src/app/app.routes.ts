@@ -7,10 +7,10 @@ import { AdminComponent } from './admin/admin.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'Inaghtkd', component: HomeComponent },
-    { path: 'Inaghtkd/about', component: AboutComponent },
-    { path: 'Inaghtkd/contact', component: ContactComponent },
-    { path: 'Inaghtkd/classes', component: ClassesComponent},
-    { path: 'Inaghtkd/admin', component: AdminComponent}
+    { path: 'inaghtkd', component: HomeComponent },
+    { path: 'inaghtkd/about', component: AboutComponent },
+    { path: 'inaghtkd/contact', component: ContactComponent },
+    { path: 'inaghtkd/classes', component: ClassesComponent},
+    { path: 'inaghtkd/admin', component: AdminComponent}
   ];
   
