@@ -17,7 +17,7 @@ import { environment } from '../environment.prod';
 export class AppComponent {
   title = 'inaghtkd';
   isSidenavOpen = false;
-  public logo1: string = `assets/icons/ita_logo1.png`;
+  public logo1: string = `https://bmalone100.github.io/inaghtkd/assets/icons/ita_logo1.png`;
   public logo2: string = `${environment.assetLogoPath}ita_logo2.png`;
   public logo3: string = `${environment.assetLogoPath}itf.png`;
   public homeRoute: string = `${environment.homePath}`;
