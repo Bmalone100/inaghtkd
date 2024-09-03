@@ -28,7 +28,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/inagh-logo.ico",
-              "src/assets"
+              "assets"
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
